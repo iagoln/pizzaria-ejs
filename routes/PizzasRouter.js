@@ -25,5 +25,6 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
+router.get('/pizzacreate2', PizzasLeandroCoelho.index);
 
 module.exports = router;
