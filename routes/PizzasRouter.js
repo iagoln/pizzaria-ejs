@@ -26,6 +26,6 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
-router.get('marceloalves', PizzaMarceloAlves.index)
+router.get('/marceloalves', PizzamarceloAlves.index)
 
 module.exports = router;
