@@ -5,6 +5,6 @@ const path = require('path');
 
 module.exports = {
 	index: (req, res)=>{
-		res.render("pizza-create2", {pizzas});
+		res.render("pizza-create2", {nome:"Pizzaria do lelê"});
 	},
 }
