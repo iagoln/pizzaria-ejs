@@ -25,5 +25,5 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
-router.get('index', pizzasRomulo.index)
+router.get('/romulo', pizzasRomulo.index)
 module.exports = router;
