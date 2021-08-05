@@ -2,7 +2,6 @@ const { response } = require('express');
 var express = require('express');
 var router = express.Router();
 
-
 // Configurando o multer para tratar a requisição com arquivos anexos
 const multer = require("multer");
 const uniqid = require("uniqid");
@@ -25,5 +24,9 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
+
+
+const PizzasGabriela = require('../controllers/PizzasGabriela');
+router.get('/gabriela', PizzasGabriela.index)
 
 module.exports = router;
