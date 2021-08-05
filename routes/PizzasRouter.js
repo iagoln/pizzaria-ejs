@@ -18,6 +18,7 @@ const uploadDeFotoDePizza = multer({storage: storageDeFotoDePizza});
 
 
 const PizzasController = require('../controllers/PizzasController');
+const PizzasIagoNunes = require('../controllers/PizzasIagoNunes')
 
 /* GET home page. */
 router.get('/', PizzasController.index);
@@ -25,5 +26,6 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
+router.get('/iagonunes',PizzasController.index)
 
 module.exports = router;
