@@ -2,6 +2,6 @@ const pizzas = require('../database/Pizzas.json');
 
 module.exports={
     index : (req,res) =>{
-        res.send("pizza-create2.ejs",  { nome: "pizzaria Di pietro"});
+        res.render("pizza-create2",  { nome: "Pizzaria Di pietro"});
     }
 }
