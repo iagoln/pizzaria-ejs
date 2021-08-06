@@ -6,6 +6,7 @@ var router = express.Router();
 // Configurando o multer para tratar a requisição com arquivos anexos
 const multer = require("multer");
 const uniqid = require("uniqid");
+const PizzaCamilaMuzzi = require('../controllers/PizzaCamilaMuzzi');
 const storageDeFotoDePizza = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "public/img")
@@ -18,6 +19,7 @@ const uploadDeFotoDePizza = multer({storage: storageDeFotoDePizza});
 
 
 const PizzasController = require('../controllers/PizzasController');
+const PizzasCamilaMuzzi = require('../controllers/PizzaCamilaMuzzi');
 
 /* GET home page. */
 router.get('/', PizzasController.index);
@@ -25,5 +27,6 @@ router.get('/pizzas/create', PizzasController.create);
 router.post('/pizzas/create',uploadDeFotoDePizza.single('img'), PizzasController.store);
 router.get('/pizzas/:id', PizzasController.show);
 router.get('/busca', PizzasController.busca);
+router.get("/Camila", PizzasCamilaMuzzi.index);
 
 module.exports = router;
