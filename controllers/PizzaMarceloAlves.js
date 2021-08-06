@@ -1,5 +1,5 @@
 module.exports = {
   index: (req, res) => {
-    res.render("pizza-create2", {nome: "Pizzaria Di Pietro"});
+    res.render("pizza-create2", { nome: "Pizzaria Di pietro" });
   }
 }
